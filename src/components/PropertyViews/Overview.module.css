@@ -1,0 +1,90 @@
+.basic-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.basic-title {
+  font-weight: bold;
+}
+
+.overview-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-right: 1px solid #fff;
+  font-size: 2.4rem;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+
+.icons {
+  width: 2rem;
+  height: 2rem;
+  color: #c6ccd1;
+}
+.icons p {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 1.6rem;
+}
+
+.title-info {
+  font-size: 1.6rem;
+}
+
+.services-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.service-icon {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  font-size: 2.4rem;
+  color: #6ab3eb;
+  cursor: pointer;
+}
+
+.service-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.contact-title {
+  font-weight: bold;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.location-title {
+  font-weight: bold;
+}

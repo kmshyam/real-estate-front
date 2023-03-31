@@ -1,0 +1,123 @@
+.property-container {
+  overflow-y: scroll;
+  height: 105%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heading {
+  padding: 3rem 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.heading h1 {
+  font-size: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4f4e4e;
+}
+
+.section {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.5rem;
+}
+
+.property-details {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+}
+
+.image {
+  height: 38rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.basic-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem 2rem 2rem 2rem;
+  font-size: 1.6rem;
+}
+
+.basic-details-section h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #6ab3eb;
+}
+
+.basic-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.overview h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.infos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3rem;
+  column-gap: 1rem;
+}
+
+.services h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8rem;
+  align-items: center;
+}
+
+.description-section h1 {
+  font-size: 2rem;
+}
+
+.description-section p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+.contact-section h1 {
+  font-size: 2rem;
+}
+
+.contact-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+
+.location-section h1 {
+  font-size: 2rem;
+}
+
+.location-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
