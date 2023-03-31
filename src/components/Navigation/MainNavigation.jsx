@@ -58,13 +58,16 @@ const MainNavigation = () => {
   };
 
   const deleteProperties = (USER_ID, token) => {
-    fetch(`http://localhost:8080/api/property/delete-all/${USER_ID}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-    })
+    fetch(
+      `https://real-estate-project-backend.onrender.com/api/property/delete-all/${USER_ID}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })
@@ -77,13 +80,16 @@ const MainNavigation = () => {
   };
 
   const deleteUser = (USER_ID, token) => {
-    fetch(`http://localhost:8080/api/users/delete/${USER_ID}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-    })
+    fetch(
+      `https://real-estate-project-backend.onrender.com/api/users/delete/${USER_ID}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })
@@ -116,7 +122,7 @@ const MainNavigation = () => {
 
   useEffect(() => {
     const token = getAuthToken().toString();
-    fetch(`http://localhost:8080/api/users/userId`, {
+    fetch(`https://real-estate-project-backend.onrender.com/api/users/userId`, {
       method: "GET",
       headers: {
         Authorization: token,

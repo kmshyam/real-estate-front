@@ -56,14 +56,17 @@ const LocationInfoForm = () => {
       longitude: longitude,
     };
 
-    fetch("http://localhost:8080/api/property/add/location-info", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify(locationInfo),
-    })
+    fetch(
+      "https://real-estate-project-backend.onrender.com/api/property/add/location-info",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify(locationInfo),
+      }
+    )
       .then((response) => {
         return response.json();
       })
@@ -83,12 +86,15 @@ const LocationInfoForm = () => {
 
   const loadGeneralInfoHandler = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8080/api/property/add/general-info", {
-      method: "GET",
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      "https://real-estate-project-backend.onrender.com/api/property/add/general-info",
+      {
+        method: "GET",
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })

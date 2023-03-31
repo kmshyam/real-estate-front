@@ -265,14 +265,17 @@ const EditPropertyForm = () => {
     };
     const token = getAuthToken();
 
-    fetch(`http://localhost:8080/api/property/edit/${PPD_ID}`, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify(updatedPropertyData),
-    })
+    fetch(
+      `https://real-estate-project-backend.onrender.com/api/property/edit/${PPD_ID}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify(updatedPropertyData),
+      }
+    )
       .then((response) => {
         return response.json();
       })

@@ -32,7 +32,9 @@ const HomePage = () => {
   useEffect(() => {
     const sendRequest = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/property/all");
+        const response = await fetch(
+          "https://real-estate-project-backend.onrender.com/api/property/all"
+        );
         const responseData = await response.json();
         if (!response.ok) {
           throw new Error(responseData.message);
@@ -67,12 +69,15 @@ const HomePage = () => {
     event.preventDefault();
     const searchValue = searchInputRef.current.value;
     const token = getAuthToken();
-    fetch(`http://localhost:8080/api/property/search/${searchValue}`, {
-      method: "GET",
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      `https://real-estate-project-backend.onrender.com/api/property/search/${searchValue}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })
@@ -99,12 +104,15 @@ const HomePage = () => {
 
   const viewPropertyHandler = (PPD_ID) => {
     const token = getAuthToken();
-    fetch(`http://localhost:8080/api/property/search/${PPD_ID}`, {
-      method: "GET",
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      `https://real-estate-project-backend.onrender.com/api/property/search/${PPD_ID}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })

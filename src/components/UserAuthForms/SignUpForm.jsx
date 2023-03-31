@@ -55,16 +55,19 @@ const SignUpForm = () => {
       return;
     }
     try {
-      const response = await fetch("http://localhost:8080/api/users/signup", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          email: enteredEmail,
-          password: enteredPassword,
-        }),
-      });
+      const response = await fetch(
+        "https://real-estate-project-backend.onrender.com/api/users/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            email: enteredEmail,
+            password: enteredPassword,
+          }),
+        }
+      );
       const responseData = await response.json();
       if (responseData.status === "Failed") {
         throw new Error(responseData.message);

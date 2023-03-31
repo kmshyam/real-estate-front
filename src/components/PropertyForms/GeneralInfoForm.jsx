@@ -62,14 +62,17 @@ const GeneralInfoForm = () => {
       imageURL:
         "https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=600",
     };
-    fetch("http://localhost:8080/api/property/add/general-info", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify(generalInfo),
-    })
+    fetch(
+      "https://real-estate-project-backend.onrender.com/api/property/add/general-info",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify(generalInfo),
+      }
+    )
       .then((response) => {
         return response.json();
       })
@@ -84,12 +87,15 @@ const GeneralInfoForm = () => {
 
   const loadPropertyDetailHandler = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8080/api/property/add/property-detail", {
-      method: "GET",
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      "https://real-estate-project-backend.onrender.com/api/property/add/property-detail",
+      {
+        method: "GET",
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })

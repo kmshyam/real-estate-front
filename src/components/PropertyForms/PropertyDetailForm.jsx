@@ -105,14 +105,17 @@ const PropertyDetailForm = () => {
       facing: facing,
     };
 
-    fetch("http://localhost:8080/api/property/add/property-detail", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify(propertyDetail),
-    })
+    fetch(
+      "https://real-estate-project-backend.onrender.com/api/property/add/property-detail",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify(propertyDetail),
+      }
+    )
       .then((response) => {
         return response.json();
       })
@@ -127,12 +130,15 @@ const PropertyDetailForm = () => {
 
   const loadBasicInfoHandler = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8080/api/property/add/basic-info", {
-      method: "GET",
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      "https://real-estate-project-backend.onrender.com/api/property/add/basic-info",
+      {
+        method: "GET",
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })
